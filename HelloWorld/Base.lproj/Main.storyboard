@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App is now loaded..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdF-ka-UL8">
+                                <rect key="frame" x="16" y="28" width="158" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="fGD-pd-hyY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThF-Xx-BjT">
+                                <rect key="frame" x="16" y="99" width="103" height="30"/>
+                                <state key="normal" title="Say Something"/>
+                                <connections>
+                                    <action selector="saySomethingTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0V-Pk-Lbs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WdF-ka-UL8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BFi-7k-Dcz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WdF-ka-UL8" secondAttribute="trailing" id="CnP-56-q2P"/>
+                            <constraint firstItem="WdF-ka-UL8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G1A-kG-pBL"/>
+                            <constraint firstItem="WdF-ka-UL8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Jpp-TZ-sQQ"/>
+                            <constraint firstItem="WdF-ka-UL8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ury-3I-86f"/>
+                            <constraint firstItem="ThF-Xx-BjT" firstAttribute="top" secondItem="WdF-ka-UL8" secondAttribute="bottom" constant="50" id="WSJ-xA-k6S"/>
+                            <constraint firstItem="ThF-Xx-BjT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gme-1J-HpM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WdF-ka-UL8" secondAttribute="trailing" id="wW8-nq-lNc"/>
+                            <constraint firstItem="ThF-Xx-BjT" firstAttribute="top" secondItem="WdF-ka-UL8" secondAttribute="bottom" constant="50" id="zDq-Lu-D4G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="WdF-ka-UL8" id="j5Z-Sj-kWx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="406" y="123"/>
         </scene>
     </scenes>
 </document>

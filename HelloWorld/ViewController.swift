@@ -19,7 +19,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var displayLabel: UILabel!
 
+    @IBAction func saySomethingTapped(_ sender: UIButton) {
+        displayLabel.text = "Hello World!"
+    }
 
 }
 
